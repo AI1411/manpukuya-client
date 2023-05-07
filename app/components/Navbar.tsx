@@ -6,7 +6,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import {ChevronDownIcon} from '@heroicons/react/20/solid'
+import {ChevronDownIcon, ShoppingCartIcon} from '@heroicons/react/20/solid'
 import GenreList from "@/app/components/GenreList";
 
 const classNames = (...classes: any) => {
@@ -48,7 +48,10 @@ const Navbar = () => {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            ログイン<span aria-hidden="true">&rarr;</span>
+            ログイン
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-2">
+            <ShoppingCartIcon className="h-6 w-6" aria-hidden="true"/>
           </a>
         </div>
       </nav>
