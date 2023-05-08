@@ -1,13 +1,14 @@
 'use client';
 
 import {useState} from "react";
-import {Dialog, Disclosure, Popover, Transition} from '@headlessui/react'
+import {Dialog, Disclosure, Popover} from '@headlessui/react'
 import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import {ChevronDownIcon, ShoppingCartIcon} from '@heroicons/react/20/solid'
 import GenreList from "@/app/components/GenreList";
+import Link from "next/link";
 
 const classNames = (...classes: any) => {
   return classes.filter(Boolean).join(' ')
@@ -47,12 +48,12 @@ const Navbar = () => {
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href={"/login"} className="text-sm font-semibold leading-6 text-gray-900">
             ログイン
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-2">
+          </Link>
+          <Link href="/cart/1" className="text-sm font-semibold leading-6 text-gray-900 px-2">
             <ShoppingCartIcon className="h-6 w-6" aria-hidden="true"/>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
